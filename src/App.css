@@ -1,0 +1,178 @@
+/* ── Google Font — Poppins ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ── Global ─────────────────────────────────────────────────────────── */
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+/* ── Override Brite primary → Blue ──────────────────────────────────── */
+:root {
+  --bs-primary:        #2563eb;
+  --bs-primary-rgb:    37, 99, 235;
+  --bs-link-color:     #2563eb;
+  --bs-border-radius:  8px;
+}
+
+/* ── Brite-style card ────────────────────────────────────────────────── */
+.cozy-card {
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  background: #fff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.cozy-card:hover {
+  box-shadow: 8px 8px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+/* ── Brite-style input ───────────────────────────────────────────────── */
+.cozy-input {
+  border: 2px solid #000 !important;
+  border-radius: 8px !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  transition: box-shadow 0.15s ease;
+}
+
+.cozy-input:focus {
+  border-color: #2563eb !important;
+  box-shadow: 3px 3px 0px #2563eb !important;
+  outline: none;
+}
+
+/* ── Brite-style primary button ─────────────────────────────────────── */
+.cozy-btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 4px 4px 0px #000;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+/* .btn:hover{
+    background-color: #1d4ed8;
+} */
+
+.cozy-btn-primary:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+  box-shadow: 6px 6px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.cozy-btn-primary:active {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* ── Brite-style success button ─────────────────────────────────────── */
+.cozy-btn-success {
+  background-color: #16a34a;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 4px 4px 0px #000;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.cozy-btn-success:hover {
+  background-color: #15803d;
+  color: #fff;
+  box-shadow: 6px 6px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.cozy-btn-success:active {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* ── Brite-style danger button ──────────────────────────────────────── */
+.cozy-btn-danger {
+  background-color: #dc2626;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 4px 4px 0px #000;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.cozy-btn-danger:hover {
+  background-color: #b91c1c;
+  color: #fff;
+  box-shadow: 6px 6px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.cozy-btn-danger:active {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* ── Brite-style secondary/outline button ───────────────────────────── */
+.cozy-btn-outline {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 4px 4px 0px #000;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.cozy-btn-outline:hover {
+  background-color: #f3f4f6;
+  box-shadow: 6px 6px 0px #000;
+  transform: translate(-2px, -2px);
+}
+
+.cozy-btn-outline:active {
+  box-shadow: 2px 2px 0px #000;
+  transform: translate(2px, 2px);
+}
+
+/* ── Badge ───────────────────────────────────────────────────────────── */
+.cozy-badge {
+  border: 1.5px solid #000;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+}
+
+/* ── Section title ───────────────────────────────────────────────────── */
+.cozy-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.cozy-subtitle {
+  font-weight: 400;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────── */
+.cozy-divider {
+  border-top: 2px solid #000;
+  margin: 1rem 0;
+}
+
+/* ── Page wrapper ────────────────────────────────────────────────────── */
+.cozy-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+}
