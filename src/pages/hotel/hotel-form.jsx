@@ -159,8 +159,9 @@ function HotelForm() {
                 <Form>
                   {/* Name */}
                   <div className="mb-3">
-                    <label className="form-label fw-semibold">Hotel Name</label>
+                    <label htmlFor="name" className="form-label fw-semibold">Hotel Name</label>
                     <Field
+                      id = "name"
                       type="text"
                       name="name"
                       placeholder="e.g. The Grand Horizon"
@@ -173,8 +174,9 @@ function HotelForm() {
 
                   {/* Location */}
                   <div className="mb-3">
-                    <label className="form-label fw-semibold">Location</label>
+                    <label htmlFor="location" className="form-label fw-semibold">Location</label>
                     <Field
+                      id = "location"
                       type="text"
                       name="location"
                       placeholder="e.g. Chennai, Tamil Nadu"
@@ -187,10 +189,11 @@ function HotelForm() {
 
                   {/* Description */}
                   <div className="mb-3">
-                    <label className="form-label fw-semibold">
+                    <label htmlFor="description" className="form-label fw-semibold">
                       Description
                     </label>
                     <Field
+                      id="description"
                       as="textarea"
                       name="description"
                       placeholder="Describe your hotel..."
@@ -204,8 +207,9 @@ function HotelForm() {
 
                   {/* Image URL */}
                   <div className="mb-4">
-                    <label className="form-label fw-semibold">Image URL</label>
+                    <label htmlFor="imageUrl" className="form-label fw-semibold">Image URL</label>
                     <Field
+                      id="imageUrl"
                       type="url"
                       name="imageUrl"
                       placeholder="https://example.com/hotel.jpg"
@@ -218,7 +222,7 @@ function HotelForm() {
 
                   {/* Amenities */}
                   <div className="mb-4">
-                    <label className="form-label fw-semibold">Amenities</label>
+                    <label htmlFor="amenities" className="form-label fw-semibold">Amenities</label>
                     <div className="row g-2">
                       {amenities.map(({ name, label }) => (
                         <div className="col-4" key={name}>

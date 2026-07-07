@@ -2,11 +2,11 @@ import http from "../http-common";
 
 class BookingDataService {
     
-  add(data) {
+  createBooking(data) {
     return http.post(`/booking`, data);
   }
 
-  cancel(data) {
+  cancelBooking(data) {
     return http.post(`/booking/cancel`, data);
   }
 

@@ -1,7 +1,9 @@
 import { useContext } from "react";
-import AuthContext from "../context/AuthContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+
+import AuthContext from "../context/AuthContext";
+import logo from "../assets/logo.svg";
 
 function Navbar() {
   const { user, isLoggedIn, logout } = useContext(AuthContext);
@@ -27,11 +29,12 @@ function Navbar() {
         <div className="container">
           {/* Brand */}
           <NavLink
-            className="navbar-brand fw-bold"
+            className="navbar-brand fw-bold d-flex align-items-center gap-2"
             to="/"
             style={{ fontSize: "1.3rem", color: "#2563eb" }}
           >
-            🏨 CozyHeaven
+            <img src={logo} alt="CozyHeaven logo" width={32} height={32} />
+            <span>CozyHeaven</span>
           </NavLink>
 
           {/* Toggle for mobile */}

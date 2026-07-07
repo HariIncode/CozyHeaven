@@ -8,6 +8,7 @@ import { useLoadingBar } from "../../context/LoadingBarContext";
 
 import AuthContext from "../../context/AuthContext";
 import LoginDataService from "../../services/loginService";
+import CozySpinner from "../../components/Spinner";
 
 function Login() {
   const loadingBar = useLoadingBar();

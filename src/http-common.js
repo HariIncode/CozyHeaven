@@ -14,7 +14,7 @@ api.interceptors.request.use((config) => {
         config.headers.Authorization = `Bearer ${token}`;
     }
 
-    return config;   // ← This is required
+    return config;
 });
 
 export default api;
