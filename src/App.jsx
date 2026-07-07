@@ -42,6 +42,7 @@ function App() {
       <LoadingBarContext.Provider value={loadingBarRef}>
 
         <LoadingBar
+        className="loading-bar"
           color="#2563eb"
           // color="#2a92d3"
           // color="#d32a2a"

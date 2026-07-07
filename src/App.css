@@ -63,6 +63,14 @@ body {
     background-color: #1d4ed8;
 } */
 
+.loading-bar {
+  box-shadow:
+    0 0 8px #2563eb,
+    0 0 16px #3b82f6,
+    0 0 24px #60a5fa !important;
+}
+
+
 .cozy-btn-primary:hover {
   background-color: #1d4ed8;
   color: #fff;

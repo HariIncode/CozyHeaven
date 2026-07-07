@@ -21,10 +21,12 @@ function RoomList() {
 
   useEffect(() => {
     Promise.all([
-      roomService.getRoomsByHotel(hotelId),
+      roomService.getByHotelId(hotelId),
       hotelService.getHotelById(hotelId),
     ])
       .then(([roomsRes, hotelRes]) => {
+        console.log(roomsRes);
+        
         setRooms(roomsRes.data);
         setHotel(hotelRes.data);
         loadingBar.current.continuousStart();
@@ -50,7 +52,7 @@ function RoomList() {
     }).then((result) => {
       if (result.isConfirmed) {
         roomService
-          .deleteRoom(roomId)
+          .delete(roomId)
           .then(() => {
             toast.success("Room deleted", { id: toatstId });
             setRooms((prev) => prev.filter((r) => r.roomId !== roomId));

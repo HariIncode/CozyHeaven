@@ -26,7 +26,7 @@ class HotelDataService{
         return http.post("/hotels/search", data);
     }
 
-    delete(hotelId){
+    deleteHotel(hotelId){
         return http.delete(`/hotels/${hotelId}`);
     }
 

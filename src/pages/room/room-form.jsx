@@ -24,7 +24,7 @@ function RoomForm() {
     capacity: 1,
     fare: 0,
     sizeSQM: 0,
-    isAc: false,
+    ac: false,
   });
 
   //If the form is on Edit mode then pre fill the Data's
@@ -42,7 +42,7 @@ function RoomForm() {
             capacity: r.capacity || 1,
             fare: r.fare || 0,
             sizeSQM: r.sizeSQM || 0,
-            isAC: r.isAC || false,
+            ac: r.ac || false,
           });
         })
         .catch(() => {
@@ -81,6 +81,9 @@ function RoomForm() {
       isEditMode ? "Updating room..." : "Adding room...",
     );
 
+    console.log("Adding OR Updating Room",values);
+    
+
     loadingBar.current.staticStart();
 
     const request = isEditMode
@@ -99,7 +102,7 @@ function RoomForm() {
         navigate(`/hotel/${hotelId}/rooms`);
       })
       .catch((error) => {
-        toast.error(error.response.data?.message || "Something went wrong.", {
+        toast.error(error.response.data || "Something went wrong.", {
           id: toastId,
         });
       })
@@ -245,8 +248,8 @@ function RoomForm() {
                       <div className="cozy-card p-3 d-flex align-items-center gap-3">
                         <Field
                           type="checkbox"
-                          name="isAC"
-                          id="isAC"
+                          name="ac"
+                          id="ac"
                           className="form-check-input mt-0"
                           style={{
                             width: "20px",
@@ -255,7 +258,7 @@ function RoomForm() {
                           }}
                         />
                         <label
-                          htmlFor="isAC"
+                          htmlFor="ac"
                           className="mb-0 fw-semibold"
                           style={{ cursor: "pointer" }}
                         >
